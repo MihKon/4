@@ -8,22 +8,26 @@ public class Square extends Rectangle{
         super(s, s);
     }
     Square(){}
+
     public double getSide(){
-        return this.getLength();
+        return super.getLength();
     }
+
     public void setSide(double side){
-        this.width = side;
-        this.length = side;
+        super.width = side;
+        super.length = side;
     }
 
     @Override
     public void setWidth(double side) {
-        this.setWidth(side);
+        super.setWidth(side);
+        super.setLength(side);
     }
 
     @Override
     public void setLength(double side) {
-        this.setLength(side);
+        super.setWidth(side);
+        super.setLength(side);
     }
 
     @Override

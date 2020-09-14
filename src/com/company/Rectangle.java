@@ -3,6 +3,7 @@ package com.company;
 public class Rectangle extends Shape{
     double width = 1;
     double length = 1;
+
     Rectangle(double w, double l, String c, boolean f){
         super(c, f);
         this.width = w;
@@ -32,16 +33,23 @@ public class Rectangle extends Shape{
 
     @Override
     public double getArea() {
-        return super.getArea();
+        double area = this.width*this.length;
+        return area;
     }
 
     @Override
     public double getPerimeter() {
+        double perimeter = (this.length+this.width)*2;
         return super.getPerimeter();
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Rectangle{" +
+                "width=" + width +
+                ", length=" + length +
+                ", color='" + color + '\'' +
+                ", filled=" + filled +
+                '}';
     }
 }

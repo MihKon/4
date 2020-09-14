@@ -3,6 +3,7 @@ package com.company;
 public abstract class Shape {
     String color = "red";
     boolean filled = true;
+
     Shape(String c, boolean f){
         this.color = c;
         this.filled =f;
@@ -24,11 +25,22 @@ public abstract class Shape {
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
-    public double getArea(){}
-    public double getPerimeter(){}
+
+    public double getArea(){
+        double area = 1;
+        return area;
+    }
+
+    public double getPerimeter(){
+        double perimeter = 1;
+        return perimeter;
+    }
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Shape{" +
+                "color='" + color + '\'' +
+                ", filled=" + filled +
+                '}';
     }
 }
